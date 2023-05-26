@@ -75,7 +75,7 @@ if (isset($_GET["mode"])) {
  */
 function get_info($folder) {
   $info = file("books/$folder/info.txt");
-  empty_checker(count($info[1]));
+  empty_checker(count($info));
   $information["title"] = trim($info[0]);
   $information["author"] = trim($info[1]);
   return $information;
